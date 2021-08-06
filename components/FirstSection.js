@@ -1,4 +1,8 @@
 import Image from "next/image"
+import WorkInfoCard from "./WorkInfoCard"
+import { CheckIcon } from "@heroicons/react/solid"
+import CotactForm from "./ContactForm"
+
 function FirstSection() {
   return (
     <div className='mt-[400px] md:mt-[120px]'>
@@ -53,6 +57,7 @@ function FirstSection() {
       <h1 className='text-4xl text-blue-900 '>
         เริ่มจ้างงานฟรีแลนซ์ง่ายๆ กับ Fastwork
       </h1>
+
       <div className='flex  space-x-3 justify-between py-24'>
         <div className='flex space-x-3  '>
           <div className='space-y-12'>
@@ -108,6 +113,67 @@ function FirstSection() {
           <Image src='/images/web/asdd.jpg' layout='fill' objectFit='cover' />
         </div>
       </div>
+      <div className='text-center'>
+        <h1 className='text-4xl text-blue-900 mb-12'>
+          เรามีบริการที่หลากหลาย ตามความต้องการของคุณ
+        </h1>
+      </div>
+      <div className='grid grid-cols-1 md:grid-cols-3 space-x-2 mb-28'>
+        {[...new Array(3)].map((x) => (
+          <WorkInfoCard
+            title='Fastwork Marketplace'
+            des='สำหรับบุคคลทั่วไป / ธุรกิจขนาดเล็ก
+'
+            hImg='https://fastwork.co/static-v4/images/home/comparison/logo/marketplace.svg'
+            bImg='https://fastwork.co/static-v4/images/home/comparison/marketplace.svg'
+            details='เราคัดฟรีแลนซ์กว่า 7,500 คน จากหลากหลายอาชีพ ตั้งแต่งานขนาดเล็กถึงขนาดกลาง
+
+'
+          />
+        ))}
+      </div>
+
+      <section className='grid grid-cols-1 md:grid-cols-2 space-x-4'>
+        <div>
+          <h3 className='text-gray-700 font-semibold text-xl'>
+            Personal Assistant Service
+          </h3>
+          <h1 className='text-3xl text-blue-900 my-5 font-bold'>
+            เราหาฟรีแลนซ์ให้...แค่อึดใจเดียว
+          </h1>
+
+          <div className='flex space-x-3'>
+            <div>
+              <div className='flex'>
+                <CheckIcon className='h-5 text-green-400' />
+                <p> คุมงบได้เอง</p>
+              </div>
+              <div className='flex'>
+                <CheckIcon className='h-5 text-green-400' />
+                <p> มีผู้ช่วยดูแลจนจบงาน</p>
+              </div>
+            </div>
+            <div>
+              <div className='flex'>
+                <CheckIcon className='h-5 text-green-400' />
+                <p> ตอบเร็วแน่นอน</p>
+              </div>
+              <div className='flex'>
+                <CheckIcon className='h-5 text-green-400' />
+                <p> การันตีคุณภาพงาน</p>
+              </div>
+            </div>
+          </div>
+          <div className='relative h-[420px] my-7'>
+            <Image
+              src='https://fastwork.co/static-v4/images/pa/pa-step-th.png'
+              layout='fill'
+              objectFit='contain'
+            />
+          </div>
+        </div>
+        <CotactForm />
+      </section>
     </div>
   )
 }
