@@ -4,7 +4,7 @@ import { SearchIcon } from "@heroicons/react/solid"
 function Navbar() {
   return (
     <nav className='sticky top-0 z-50 items-center bg-blue-800 grid md:grid-cols-2  grid-cols-1 w-full'>
-      <div className='hidden md:flex space-x-4  gap-y-3'>
+      <div className='hidden md:flex space-x-4  gap-y-3 cursor-pointer'>
         <svg
           height='32'
           viewBox='0 0 174 32'
@@ -36,7 +36,7 @@ function Navbar() {
         </div>
       </div>
 
-      <div className='flex space-x-4  justify-center md:justify-end  items-center '>
+      <div className='flex space-x-4  justify-center md:justify-end  items-center cursor-pointer '>
         <div className='text-white font-semibold md:flex hidden'>
           <h4 className='hover:bg-blue-900 py-7 px-3'>Fastwork ใช้ยังไง?</h4>
           <h4 className='hover:bg-blue-900 py-7 px-3'>ส่วนลด</h4>

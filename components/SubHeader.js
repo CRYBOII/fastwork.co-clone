@@ -25,7 +25,7 @@ function SubHeader() {
             ให้เราช่วยเลือกฟรีแลนซ์
           </button>
         </div>
-        <div className=' relative bottom-[-60px] justify-evenly gap-x-8  grid grid-cols-2 md:flex  max-w-6xl mx-auto  bg-white w-full rounded-xl shadow-lg p-5 font-semibold text-gray-400 text-sm'>
+        <div className='cursor-pointer relative bottom-[-60px] justify-evenly gap-x-8  grid grid-cols-2 md:flex  max-w-6xl mx-auto  bg-white w-full rounded-xl shadow-lg p-5 font-semibold text-gray-400 text-sm'>
           <div className=' w-24'>
             <div className='h-16'>
               <img
